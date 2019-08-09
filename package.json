@@ -1,0 +1,25 @@
+{
+  "name": "platzi-express",
+  "version": "0.0.1",
+  "description": "Example express app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
+    "lint": "standard",
+    "lint-fix": "standard --fix"
+  },
+  "keywords": [
+    "express",
+    "node.js"
+  ],
+  "author": "John Serrano <jandreys15@gmail.com> (https://twitter.com/Jandrey15)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "1.19.1",
+    "standard": "13.1.0"
+  }
+}
