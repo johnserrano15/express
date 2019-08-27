@@ -1,5 +1,3 @@
 <div>
-  <h1>
-    {hello} {world}
-  </h1>
+  <h2>Hello world</h2>
 </div>

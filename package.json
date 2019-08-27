@@ -16,7 +16,8 @@
   "author": "John Serrano <jandreys15@gmail.com> (https://twitter.com/Jandrey15)",
   "license": "MIT",
   "dependencies": {
-    "express": "4.17.1"
+    "express": "4.17.1",
+    "pug": "^2.0.4"
   },
   "devDependencies": {
     "nodemon": "1.19.1",

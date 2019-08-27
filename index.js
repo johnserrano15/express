@@ -2,13 +2,16 @@
 
 const express = require('express')
 const app = express()
+const path = require('path')
+const productsRouter = require('./routes/products')
 
 const port = process.env.port || 8000
 
-app.get('/', function (req, res, next) {
-  res.send({ hello: 'world', name: 'John Serrano' })
-})
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'pug')
 
-app.listen(port, () => {
-  console.log(`On server in listening at http://localhost:${port}`)
+app.use('/products', productsRouter)
+
+app.listen(port, function () {
+  console.log(`Listening http://localhost:${port}`)
 })
