@@ -42,7 +42,7 @@ router.post('/', async (req, res, next) => {
 
     res.status(201).json({
       data: createProduct,
-      message: 'products listed'
+      message: 'product created'
     })
   } catch (err) {
     next(err)
