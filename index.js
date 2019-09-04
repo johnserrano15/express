@@ -6,6 +6,12 @@ const bodyParser = require('body-parser')
 const productsRouter = require('./routes/views/products')
 const productsApiRouter = require('./routes/api/products')
 
+const {
+  logErrors,
+  clientErrorHandler,
+  errorHandler
+} = require('./utils/middlewares/errorsHandlers')
+
 // App
 const app = express()
 
@@ -30,6 +36,11 @@ app.use('/api/products', productsApiRouter)
 app.get('/', (req, res) => {
   res.redirect('/products')
 })
+
+// error handlers
+app.use(logErrors)
+app.use(clientErrorHandler)
+app.use(errorHandler)
 
 // Server
 app.listen(port, function () {
