@@ -16,6 +16,7 @@
   "author": "John Serrano <jandreys15@gmail.com> (https://twitter.com/Jandrey15)",
   "license": "MIT",
   "dependencies": {
+    "@sentry/node": "^5.6.2",
     "body-parser": "1.19.0",
     "dotenv": "^8.1.0",
     "express": "4.17.1",
