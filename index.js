@@ -5,6 +5,7 @@ const path = require('path')
 const boom = require('boom')
 const debug = require('debug')('app:server')
 const bodyParser = require('body-parser')
+const helmet = require('helmet')
 const productsRouter = require('./routes/views/products')
 const productsApiRouter = require('./routes/api/products')
 const authApiRouter = require('./routes/api/auth')
@@ -25,6 +26,7 @@ const app = express()
 const port = process.env.port || 8000
 
 // Middlewares
+app.use(helmet())
 app.use(bodyParser.json())
 
 // Static files
